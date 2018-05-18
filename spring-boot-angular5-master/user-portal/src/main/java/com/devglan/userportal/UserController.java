@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(maxAge = 3600)
+@CrossOrigin (   maxAge = 3600)
 @RestController
 @RequestMapping({"/api"})
 public class UserController {
@@ -25,17 +25,19 @@ public class UserController {
         return userService.findById(id);
     }
 
+    @CrossOrigin
     @PutMapping
     public User update(@RequestBody User user){
         return userService.update(user);
     }
 
+    @CrossOrigin
     @DeleteMapping(path ={"/{id}"})
     public User delete(@PathVariable("id") int id) {
         return userService.delete(id);
     }
 
-    @CrossOrigin
+    
     @GetMapping
     public List<User> findAll(){
         return userService.findAll();

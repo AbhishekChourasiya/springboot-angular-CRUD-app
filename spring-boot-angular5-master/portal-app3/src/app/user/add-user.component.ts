@@ -21,6 +21,7 @@ export class AddUserComponent {
           alert('User created successfully.');
         });
 
+    window.location.href = '/users';
   }
 
 }

@@ -9,6 +9,7 @@ import { UserService } from './user.service';
   templateUrl: './user.component.html',
   styles: []
 })
+
 export class UserComponent implements OnInit {
 
   users: User[];
